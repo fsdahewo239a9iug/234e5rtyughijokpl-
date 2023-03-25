@@ -25,12 +25,12 @@ end)
 
 local function checkingzincs()
     for i,v in pairs(game:GetService('Workspace').Players:GetChildren()) do
-        if v:FindFirstChild('LowerTorso') then
-            if not v:FindFirstChild('LowerTorso'):FindFirstChild('BodyBackAttachment') then
+        if v:FindFirstChild('UpperTorso') then
+            if not v:FindFirstChild('UpperTorso'):FindFirstChild('OriginalSize') then
                 local plrcheck = game:GetService('Players'):FindFirstChild(v.Name)
                 if plrcheck then
                     local plrID = game:GetService('Players'):FindFirstChild(v.Name).UserId
-                    if table.find(STARS, plrID) then
+                    if table.find(Stars, plrID) then
                         if v:FindFirstChildWhichIsA('Humanoid') then           
                             v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. game.Players[v.Name].DisplayName) 
                         end
@@ -45,7 +45,7 @@ local function checkingzincs()
                 local plrcheck = game.Players:FindFirstChild(v.Name)
                 if plrcheck then
                     local plrID = game.Players:FindFirstChild(v.Name).UserId
-                    if table.find(Mod, plrID) then
+                    if table.find(Mods, plrID) then
                         if v:FindFirstChildWhichIsA('Humanoid') then
                             v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName)
                         end
