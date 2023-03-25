@@ -45,7 +45,7 @@ local function checkingzincs()
                 local plrcheck = game.Players:FindFirstChild(v.Name)
                 if plrcheck then
                     local plrID = game.Players:FindFirstChild(v.Name).UserId
-                    if table.find(Mods, plrID) then
+                    if table.find(Mod, plrID) then
                         if v:FindFirstChildWhichIsA('Humanoid') then
                             v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName)
                         end
